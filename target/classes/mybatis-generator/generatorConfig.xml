@@ -85,12 +85,7 @@
         tableName:指定了表名
         domainObjectName:指定了实体类的名称,可以去掉domainObjectName="False_comment"
         -->
-        <table tableName="es_comment"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false">
+        <table tableName="user_detail">
             <!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，
             比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate
             再比如：数据库里的原本列名是：`is_show_name`（都是小写），
@@ -98,9 +93,11 @@
             如果false就会生成：isShowName（去掉了下划线，变成了驼峰命名方法）；生成的setter/getter为：getIsShowName() 和setIsShowName() (只是第一个字母大写)
             注意：如果明确的使用columnOverride元素指定了字段对应的实体的属性名,那么useActualColumnNames会被忽略。
             -->
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+<!--             <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/> -->
         </table>
+        <table  tableName="user_group"></table>
+        <table  tableName="certificate"></table> 
 
 
     </context>
